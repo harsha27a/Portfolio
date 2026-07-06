@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Download, Mail, Phone, Github, Linkedin, MessageCircle } from "lucide-react";
 import { socialLinks, hero } from "@/lib/content";
+import { publicPath } from "@/lib/paths";
 
 const contacts = [
   { icon: Mail, label: "kumariharsha578@gmail.com", href: socialLinks.email },
@@ -70,13 +70,12 @@ export default function Hero() {
           transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
           whileHover={{ scale: 1.05, rotate: 2 }}
         >
-          <Image
-            src="/avatar.jpg"
+          <img
+            src={publicPath("/avatar.jpg")}
             alt="Harsha Kumari"
             width={128}
             height={128}
             className="object-cover w-full h-full"
-            priority
           />
         </motion.div>
 
@@ -96,7 +95,11 @@ export default function Hero() {
             {hero.description}
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center sm:justify-start">
-            <a href="/Harsha_Kumari_Resume.pdf" download="Harsha_Kumari_Resume.pdf" className="btn-primary">
+            <a
+              href={publicPath("/Harsha_Kumari_Resume.pdf")}
+              download="Harsha_Kumari_Resume.pdf"
+              className="btn-primary"
+            >
               <Download size={15} /> Download Resume
             </a>
             <button onClick={() => scrollTo("projects")} className="btn-secondary">
