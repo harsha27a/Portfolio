@@ -52,7 +52,7 @@ body {
   }
 
   .glass-nav {
-    @apply sticky top-0 z-30 bg-white/55 backdrop-blur-xl border-b border-pink-200/40 shadow-sm shadow-pink-100/50;
+    @apply sticky top-0 z-50 bg-white/55 backdrop-blur-xl border-b border-pink-200/40 shadow-sm shadow-pink-100/50;
   }
 
   .contact-row {
