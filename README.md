@@ -25,13 +25,20 @@ Remove-Item -Recurse -Force .next
 npm run dev
 ```
 
-## Deploy to Vercel (free)
+## Deploy to Vercel (recommended)
 
-1. Push this folder to a GitHub repository (see below).
-2. Go to [vercel.com/new](https://vercel.com/new) and sign in with GitHub.
-3. Import your repository.
-4. Vercel auto-detects Next.js — click **Deploy** (no extra settings needed).
-5. Your site will be live at a `*.vercel.app` URL.
+1. Go to [vercel.com/new](https://vercel.com/new) and sign in with GitHub.
+2. Import **harsha27a/Portfolio**.
+3. Click **Deploy** (no extra settings).
+4. Open your site at the **`.vercel.app`** URL from the Vercel dashboard — **not** the `github.io` link.
+
+> `https://harsha27a.github.io/Portfolio/` is **GitHub Pages**, not Vercel. Both can host the site, but they are different URLs.
+
+## Deploy to GitHub Pages
+
+1. On GitHub: repo **Settings → Pages → Build and deployment → Source** → choose **GitHub Actions**.
+2. Push this repo to `main`. The workflow in `.github/workflows/deploy.yml` builds and deploys automatically.
+3. After the action finishes, open [https://harsha27a.github.io/Portfolio/](https://harsha27a.github.io/Portfolio/)
 
 ## Upload to GitHub
 
